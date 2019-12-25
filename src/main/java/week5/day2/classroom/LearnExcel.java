@@ -9,8 +9,8 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class LearnExcel {
 
-	public String[][] getXLValue() throws IOException  {
-		XSSFWorkbook wbook=new XSSFWorkbook("./data/TestData.xlsx");
+	public String[][] getXLValue(String fileName) throws IOException  {
+		XSSFWorkbook wbook=new XSSFWorkbook("./data/"+fileName+".xlsx");
 XSSFSheet sheetAt = wbook.getSheetAt(0);
 short colCount = sheetAt.getRow(0).getLastCellNum();
 int rowCount = sheetAt.getLastRowNum();

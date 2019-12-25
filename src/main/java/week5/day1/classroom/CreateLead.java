@@ -3,11 +3,16 @@ package week5.day1.classroom;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import testNGBaseCode.ProjectSpecificMethods;
 
 public class CreateLead extends ProjectSpecificMethods {
+		@BeforeClass
+		public void setData() {
+			excelFileName="TestData";
+		}
 	@Test(dataProvider="getData")
 public void createLead(String cName,String fName, String lName)
 {
@@ -73,5 +78,7 @@ public void createLead(String cName,String fName, String lName)
 		}
 
 		}
+
+	
 
 }
